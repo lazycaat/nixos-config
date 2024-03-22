@@ -25,7 +25,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         inputs.disko.nixosModules.default
-        (import ./system/modules/disko/disko.nix { device = "/dev/vda"; })
+        (import ./system/module/disko/disko.nix { device = "/dev/vda"; })
 
         ./system/machine/machine1
               
