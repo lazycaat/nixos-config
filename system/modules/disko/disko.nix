@@ -4,7 +4,7 @@
 }: {
   disko.devices = {
     disk = {
-      btrfs-def = {
+      btrfs-gpt = {
         inherit device;
         type = "disk";
         content = {
