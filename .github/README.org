@@ -11,7 +11,7 @@ nix --experimental-features "nix-command flakes" run 'github:nix-community/disko
 Upgrade
 
 #+begin_src bash
-nixos-rebuild boot --flake 'github:lazycaat/nixos-config#default'
+nixos-rebuild boot --refresh --flake 'github:lazycaat/nixos-config#default'
 #+end_src
 
 ** TODO nixos [0/1]

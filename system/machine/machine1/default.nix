@@ -1,17 +1,25 @@
-{ pkgs, lib, inputs, ... }:
+{
+  pkgs,
+  lib,
+  self,
+  modulesPath,
+  ...
+}:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+
+    ./hardware-configuration.nix
+
+    (modulesPath + "/profiles/hardened.nix")
+
+    "${self}/system/module/nix"
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   
   services.openssh.enable = true;
-
-  system.stateVersion = "23.05"; # Did you read the comment?
 
   environment.systemPackages = with pkgs; [
     vim
@@ -66,10 +74,5 @@
   #     { file = "/var/keys/secret_file"; parentDirectory = { mode = "u=rwx,g=,o="; }; }
   #   ];
   # };
-
-    nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
 
 }
