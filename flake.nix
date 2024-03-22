@@ -27,7 +27,7 @@
         inputs.disko.nixosModules.default
         (import ./system/modules/disko/disko.nix { device = "/dev/vda"; })
 
-        ./system/machines/machine1
+        ./system/machine/machine1
               
         # inputs.home-manager.nixosModules.default
         # inputs.impermanence.nixosModules.impermanence
