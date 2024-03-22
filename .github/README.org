@@ -1,5 +1,7 @@
 * main
 
+** Install
+
 ** TODO nixos [0/1]
 
 *** [ ] security [0/7]
