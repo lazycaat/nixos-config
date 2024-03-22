@@ -1,6 +1,18 @@
 * main
 
-** Install
+** Use
+
+Install
+
+#+begin_src bash
+nix --experimental-features "nix-command flakes" run 'github:nix-community/disko#disko-install' -- --write-efi-boot-entries --flake 'github:lazycaat/nixos-config#default' --disk btrfs-def /dev/vda
+#+end_src
+
+Upgrade
+
+#+begin_src bash
+nixos-rebuild boot --flake 'github:lazycaat/nixos-config#default'
+#+end_src
 
 ** TODO nixos [0/1]
 
