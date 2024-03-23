@@ -11,6 +11,7 @@
     "${self}/home/module/app/yazi"
     "${self}/home/module/app/fish"
 
+    "${self}/home/module/module/stylix"
   ];
 
 }
