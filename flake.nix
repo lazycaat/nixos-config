@@ -6,7 +6,6 @@
     imports = [ ./system/machine ];
   };
 
-
   inputs = {
 
     # branches

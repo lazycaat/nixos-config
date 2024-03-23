@@ -1,24 +1,16 @@
 {
-  inputs,
+  self,
   ...
 }:
 
 { 
-  imports = [
-    inputs.impermanence.nixosModules.home-manager.impermanence
+
+  imports = [ 
+
+    "${self}/home/module/app/zellij"
+    "${self}/home/module/app/yazi"
+    "${self}/home/module/app/fish"
+
   ];
-
-  home.stateVersion = "23.11"; # Please read the comment before changing.
-
-  # home.persistence."/persist/home/user1" = {
-  #   directories = [
-  #     "Downloads"
-  #     "Music"
-  #     "Pictures"
-  #     "Documents"
-  #     "Videos"
-  #   ];
-  #   allowOther = true;
-  # };
 
 }
