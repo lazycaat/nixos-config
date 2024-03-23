@@ -24,6 +24,8 @@
     };
   };
 
+  programs.fish.enable = true;
+
   programs.fuse.userAllowOther = true;
   home-manager = {
     extraSpecialArgs = {inherit inputs self;};
