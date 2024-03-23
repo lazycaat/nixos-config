@@ -14,11 +14,12 @@
     ./hardware-configuration.nix
 
     # users
-    ../../../home/user/user1
-    ../../../home/user/root
+    "${self}/home/user/root"
+    "${self}/home/user/user1"
 
     # modules
-    ../../../system/module/nix
+    "${self}/system/module/nix"
+    "${self}/system/module/stylix"
 
     # flake modules
     (modulesPath + "/profiles/hardened.nix")
