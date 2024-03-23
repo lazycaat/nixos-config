@@ -5,6 +5,11 @@
 
 {
 
+  imports = [ 
+    inputs.home-manager.nixosModules.home-manager 
+  ];
+
+
   users.users = {
     user1 = {
       isNormalUser = true;
