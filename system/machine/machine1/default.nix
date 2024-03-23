@@ -23,7 +23,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.systemd.enable = true;
+  # boot.initrd.systemd.enable = true;
   
   services.openssh.enable = true;
 
@@ -68,7 +68,7 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
-      "/var/log"
+      # "/var/log"
     ];
   };
 
