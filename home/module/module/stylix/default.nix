@@ -4,7 +4,7 @@
   ...
 }: let
 
-  theme = "${pkgs.base16-schemes}/share/themes/catppuccin.yaml";
+  theme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
   wallpaper = pkgs.runCommand "image.png" {} ''
         COLOR=$(${pkgs.yq}/bin/yq -r .base00 ${theme})
         COLOR="#"$COLOR
