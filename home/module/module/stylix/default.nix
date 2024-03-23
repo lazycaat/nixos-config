@@ -4,11 +4,11 @@
   ...
 }: let
 
-  theme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
-
+  theme = "${pkgs.base16-schemes}/share/themes/catppuccin.yaml";
   wallpaper = pkgs.runCommand "image.png" {} ''
-        COLOR=$(${pkgs.yq}/bin/yq -r .base00 ${theme}) COLOR="#"$COLOR
-        ${pkgs.imagemagick}/bin/magick convert -size 1902x1080 xc:$COLOR $out
+        COLOR=$(${pkgs.yq}/bin/yq -r .base00 ${theme})
+        COLOR="#"$COLOR
+        ${pkgs.imagemagick}/bin/magick convert -size 1920x1080 xc:$COLOR $out
   '';
 
 in {
