@@ -21,4 +21,13 @@
     };
   };
 
+  environment.persistence."/persist/home/user1" = {
+    hideMounts = true;
+    users.talyz = {
+      directories = [
+      ];
+    };
+  };
+
+
 }
