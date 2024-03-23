@@ -3,6 +3,7 @@
   lib,
   modulesPath,
   inputs,
+  self,
   ...
 }:
 
@@ -23,7 +24,7 @@
     (modulesPath + "/profiles/hardened.nix")
     inputs.impermanence.nixosModules.impermanence
     inputs.disko.nixosModules.default
-    (import ./disko.nix { device = "/dev/vda"; })
+    (import "${self}/system/module/disko/disko.nix" { device = "/dev/vda"; })
   ];
 
   boot.loader.systemd-boot.enable = true;
