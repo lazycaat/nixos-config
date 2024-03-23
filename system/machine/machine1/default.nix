@@ -45,6 +45,8 @@
     neofetch
   ];
 
+  programs.dconf.enable = true;
+
   boot.initrd.postDeviceCommands = lib.mkAfter ''
     mkdir /btrfs_tmp
     mount /dev/root_vg/root /btrfs_tmp
