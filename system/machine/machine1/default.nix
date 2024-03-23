@@ -19,7 +19,7 @@
 
     # modules
     "${self}/system/module/nix"
-    "${self}/system/module/stylix"
+    # "${self}/system/module/stylix"
 
     # flake modules
     (modulesPath + "/profiles/hardened.nix")
