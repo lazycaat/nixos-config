@@ -24,5 +24,6 @@ in {
     # autoEnable = true;
   };
 
+  programs.dconf.enable = true;
 
 }
