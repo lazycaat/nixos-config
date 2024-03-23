@@ -1,4 +1,5 @@
 {
+  inputs,
   ...
 }:
 
@@ -12,12 +13,12 @@
     };
   };
 
-  # programs.fuse.userAllowOther = true;
-  # home-manager = {
-  #   extraSpecialArgs = {inherit inputs;};
-  #   users = {
-  #     "user1" = import ./home.nix;
-  #   };
-  # };
+  programs.fuse.userAllowOther = true;
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "user1" = import ./home.nix;
+    };
+  };
 
 }

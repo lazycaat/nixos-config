@@ -9,14 +9,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # impermanence = {
-    #   url = "github:nix-community/impermanence";
-    # };
+    impermanence = {
+      url = "github:nix-community/impermanence";
+    };
 
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {nixpkgs, ...} @ inputs:
@@ -29,8 +29,8 @@
 
         ./system/machine/machine1
               
-        # inputs.home-manager.nixosModules.default
-        # inputs.impermanence.nixosModules.impermanence
+        inputs.home-manager.nixosModules.default
+        inputs.impermanence.nixosModules.impermanence
       ];
     };
   };
