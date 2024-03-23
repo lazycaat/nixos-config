@@ -21,7 +21,7 @@
     };
   };
 
-  environment.persistence."/persist/home/user1" = {
+  environment.persistence."/persist" = {
     hideMounts = true;
     users.user1 = {
       directories = [
