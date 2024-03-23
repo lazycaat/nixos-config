@@ -8,14 +8,17 @@
 {
   imports = [
 
+    # for this machine
     ./hardware-configuration.nix
 
-    (modulesPath + "/profiles/hardened.nix")
-
+    # users
     ../../../home/user/user1
     ../../../home/user/root
-        
+
+    # modules
     ../../../system/module/nix
+    (modulesPath + "/profiles/hardened.nix")
+
   ];
 
   boot.loader.systemd-boot.enable = true;
