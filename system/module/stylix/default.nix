@@ -21,7 +21,7 @@ in {
     image = wallpaper;
     base16Scheme = theme;
     # polarity = "dark";
-    autoEnable = true;
+    # autoEnable = true;
   };
 
 
