@@ -13,7 +13,7 @@
 
     (modulesPath + "/profiles/hardened.nix")
 
-    "${self}/system/module/nix"
+    ../../../system/module/nix
   ];
 
   boot.loader.systemd-boot.enable = true;
