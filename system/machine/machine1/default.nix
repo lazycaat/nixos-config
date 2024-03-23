@@ -2,6 +2,7 @@
   pkgs,
   lib,
   modulesPath,
+  inputs,
   ...
 }:
 
@@ -18,7 +19,7 @@
     # modules
     ../../../system/module/nix
     (modulesPath + "/profiles/hardened.nix")
-
+    inputs.impermanence.nixosModules.impermanence
   ];
 
   boot.loader.systemd-boot.enable = true;
