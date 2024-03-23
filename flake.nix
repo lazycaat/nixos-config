@@ -1,7 +1,7 @@
 {
   description = "Nixos config flake";
      
-  outputs = inputs: inputs.parts.lib.mkFlake { inherit inputs; } {
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
     systems = [ "aarch64-darwin" "x86_64-linux" ];
     imports = [ ./system/machine ];
   };
