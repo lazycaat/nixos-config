@@ -23,7 +23,7 @@
 
   environment.persistence."/persist/home/user1" = {
     hideMounts = true;
-    users.talyz = {
+    users.user1 = {
       directories = [
       ];
     };
