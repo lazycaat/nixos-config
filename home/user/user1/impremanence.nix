@@ -1,5 +1,4 @@
 {
-  config,
   ...
 }:
 
@@ -7,7 +6,7 @@
 
   environment.persistence."/persist" = {
     hideMounts = true;
-    users.${config.users.users} = {
+    users.user1 = {
       directories = [
         "Downloads"
         "Music"
