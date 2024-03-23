@@ -18,8 +18,12 @@
 
     # modules
     ../../../system/module/nix
+
+    # flake modules
     (modulesPath + "/profiles/hardened.nix")
     inputs.impermanence.nixosModules.impermanence
+    inputs.disko.nixosModules.default
+    (import ./disko.nix { device = "/dev/vda"; })
   ];
 
   boot.loader.systemd-boot.enable = true;
