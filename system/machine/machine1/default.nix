@@ -1,7 +1,6 @@
 {
   pkgs,
   lib,
-  self,
   modulesPath,
   ...
 }:
@@ -13,6 +12,9 @@
 
     (modulesPath + "/profiles/hardened.nix")
 
+    ../../../home/user/user1
+    ../../../home/user/root
+        
     ../../../system/module/nix
   ];
 
