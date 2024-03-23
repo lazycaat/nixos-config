@@ -7,13 +7,15 @@
 
   system.stateVersion = "23.05";
 
-  nix.settings = {
-    sandbox = true;
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    auto-optimise-store = true;
+  nix = {
+    settings = {
+      sandbox = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      auto-optimise-store = true;
+    };
     gc = {
       dates = "weekly";
       automatic = true;
