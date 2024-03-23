@@ -21,6 +21,7 @@
     };
   };
 
+  fileSystems."/persist/home/user1".neededForBoot = true;
   environment.persistence."/persist/home/user1" = {
     hideMounts = true;
     users.user1 = {
