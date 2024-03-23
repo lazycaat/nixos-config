@@ -11,7 +11,7 @@
     inputs.home-manager.nixosModules.home-manager 
 
     "${self}/home/module/module/home-manager"
-    ./impermanence
+    ./impermanence.nix
 
   ];
 
