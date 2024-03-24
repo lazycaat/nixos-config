@@ -1,37 +1,45 @@
 {
   description = "Nixos config flake";
      
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+    systems = [ "aarch64-darwin" "x86_64-linux" ];
+    imports = [ ./system/machine ];
+  };
 
+  inputs = {
+
+    # branches
+    master.url = "github:nixos/nixpkgs/master";
+    stable.url = "github:nixos/nixpkgs/release-23.11";
+    unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+
+    # default branch
+    nixpkgs.follows = "unstable";
+
+
+
+    # modules
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # impermanence = {
-    #   url = "github:nix-community/impermanence";
-    # };
-
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-  };
-
-  outputs = {nixpkgs, ...} @ inputs:
-  {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        inputs.disko.nixosModules.default
-        (import ./disko.nix { device = "/dev/vda"; })
-
-        ./configuration.nix
-              
-        # inputs.home-manager.nixosModules.default
-        # inputs.impermanence.nixosModules.impermanence
-      ];
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    impermanence = {
+      url = "github:nix-community/impermanence";
+    };
+
   };
+
+
 }

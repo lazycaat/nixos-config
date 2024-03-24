@@ -1,0 +1,9 @@
+{
+  ...
+}:
+
+{
+  documentation = {
+    enable = false;
+  };
+}

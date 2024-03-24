@@ -1,0 +1,9 @@
+{
+  ...
+}:
+
+{
+
+  hardware.ksm.enable = true;
+  
+}
