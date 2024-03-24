@@ -12,6 +12,6 @@
 
   environment.memoryAllocator.provider = "graphene-hardened";  
 
-  kernelPackages = pkgs.linuxPackages_latest_hardened;
+  boot.kernelPackages = pkgs.linuxPackages_latest_hardened;
   
 }
