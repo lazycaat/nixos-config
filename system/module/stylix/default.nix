@@ -25,4 +25,6 @@ in {
     homeManagerIntegration.autoImport = false;
   };
 
+  programs.dconf.enable = true;
+
 }
