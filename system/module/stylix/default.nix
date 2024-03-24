@@ -29,14 +29,4 @@ in {
     # };
   };
 
-  # programs.dconf.enable = true;
-
-  console ={
-    packages = with pkgs; [
-      scientifica
-      curie
-    ];
-    font = "scientifica";
-  };
-
 }

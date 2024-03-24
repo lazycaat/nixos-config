@@ -15,7 +15,6 @@
 
   ];
 
-
   users.users = {
     user1 = {
       isNormalUser = true;
@@ -34,18 +33,5 @@
       "user1" = import ./home.nix;
     };
   };
-
-  # environment.persistence."/persist" = {
-  #   hideMounts = true;
-  #   users.user1 = {
-  #     directories = [
-  #       "Downloads"
-  #       "Music"
-  #       "Pictures"
-  #       "Documents"
-  #       "Videos"
-  #     ];
-  #   };
-  # };
 
 }
