@@ -8,7 +8,7 @@
 
   imports = [
     inputs.disko.nixosModules.default
-    (import "${self}/system/module/disko/disko.nix" { device = "/dev/vda"; })
+    (import "${self}/system/module/module/disko/btrfs-gpt.nix" { device = "/dev/vda"; })
   ];
 
 }
