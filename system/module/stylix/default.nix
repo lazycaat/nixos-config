@@ -22,6 +22,7 @@ in {
     base16Scheme = theme;
     # polarity = "dark";
     autoEnable = false;
+    homeManagerIntegration.autoImport = false;
   };
 
 }
