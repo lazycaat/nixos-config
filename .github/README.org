@@ -5,7 +5,7 @@
 Install
 
 #+begin_src bash
-nix --experimental-features "nix-command flakes" run 'github:nix-community/disko#disko-install' -- --write-efi-boot-entries --flake 'github:lazycaat/nixos-config/develop#default' --disk main /dev/vda
+nix --experimental-features "nix-command flakes" run 'github:nix-community/disko#disko-install' -- --write-efi-boot-entries --flake 'github:lazycaat/nixos-config/develop#machine1' --disk main /dev/vda
 #+end_src
 
 Upgrade
@@ -22,10 +22,12 @@ nixos-rebuild boot --refresh --flake 'github:lazycaat/nixos-config#default'
   - [ ] boxxy
   - [ ] apparmor?
   - [ ] selinux ?
-- [ ] network [0/6]
-  - [ ] firewall
+- [-] network [0/6]
+  - [-] firewall
     - [ ] opensnitch
     - [ ] openGFW
+    - [ ] nftables
+    - [X] iptables
   - [ ] networks [0/9]
     - [ ] vpn
     - [ ] ygg
@@ -53,15 +55,15 @@ nixos-rebuild boot --refresh --flake 'github:lazycaat/nixos-config#default'
   - [ ] waybar screencast notify
   - [ ] email/ntfy
   - [ ] scan info
-- [ ] system [0/10]
+- [-] system [2/11]
   - [ ] graphene malloc
-  - [ ] hardened kernel
+  - [X] hardened kernel
   - [ ] secure boot
-  - [ ] journaiung
+  - [ ] journailung
   - [ ] fido2 support
   - [ ] no logs on disks (impremenance)
   - [ ] sudo alter (su, sudo-rs, please, doas)?
-  - [ ] proprietarity only for users or drivers
+  - [X] proprietarity only for users or drivers
   - [ ] identifier leaks protect
   - [ ] auto reboot every 18h
   - [ ] anti hack text (moth)
@@ -69,48 +71,43 @@ nixos-rebuild boot --refresh --flake 'github:lazycaat/nixos-config#default'
   - [ ] keyboard leaks (kloak)
 
 
-
 *** system nix
 
-- [ ] flake structure
-- [ ] users standalone
-- [ ] modules [0/6]
-  - [ ] home-manager
-  - [ ] stylix
-    - [ ] fonts
-    - [ ] wallpaper
-    - [ ] cursors
-    - [ ] icons ?
+- [X] flake structure
+- [X] users standalone
+- [-] modules [3/6]
+  - [X] home-manager
+  - [X] stylix
   - [ ] lanzaboot
-  - [ ] disko
-    - [ ] zfs
+  - [-] disko
+    - [X] zfs
     - [ ] luks
     - [ ] fido2
-  - [ ] impremenance
+  - [X] impremenance
   - [ ] agenix
 - [ ] hardware [0/4]
   - [ ] nvidia
-  - [ ] bluetoot
+  - [ ] bluetooth
   - [ ] printers
   - [ ] equalizer
-- [ ] nix [0/2]
-  - [ ] flake
-  - [ ] diff update
-  - [ ] optimise & gc
+- [X] nix [3/3]
+  - [X] flake
+  - [X] diff update
+  - [X] optimise & gc
 - [ ] keyboard [0/3]
   - [ ] miryoku
   - [ ] autocomplete
   - [ ] text correction
-- [ ] tweaks [0/9]
-  - [ ] zram
-  - [ ] auto-cpu-freq
+- [-] tweaks [8/9]
+  - [X] zram
+  - [X] auto-cpu-freq
   - [ ] nss
-  - [ ] documentation
-  - [ ] fwupd
-  - [ ] ananicy
-  - [ ] ksm
-  - [ ] powertop
-  - [ ] gvfs
+  - [X] documentation
+  - [X] fwupd
+  - [X] ananicy
+  - [X] ksm
+  - [X] powertop
+  - [X] gvfs
 - [ ] may be
   - plymouth
   - nix-index
@@ -153,19 +150,19 @@ nixos-rebuild boot --refresh --flake 'github:lazycaat/nixos-config#default'
   - [ ] rust
   - [ ] latex
   - [ ] typst
-- [ ] terminal apps [0/4]
+- [-] terminal apps [1/4]
   - [ ] terminals
     - [ ] foot
     - [ ] kitty
-  - [ ] file manager
-    - [ ] yazi
+  - [X] file manager
+    - [X] yazi
   - [ ] text editor
     - [ ] helix
     - [ ] neovim
-  - [ ] other
+  - [-] other
     - [ ] ssh client
     - [ ] git client
-    - [ ] zellj
+    - [X] zellj
 - [ ] tweaks [0/1]
   - [ ] boxxy
 - [ ] emacs [0/0]
@@ -174,7 +171,7 @@ nixos-rebuild boot --refresh --flake 'github:lazycaat/nixos-config#default'
     - [ ] firefox
     - [ ] librewolf
     - [ ] floorp
-  - [ ] browsers plugins [0/2]
+  - [ ] browsers plugins [0/3]
     - [ ] dark reader
     - [ ] ublock
     - [ ] containers
