@@ -21,8 +21,8 @@ in {
     image = wallpaper;
     base16Scheme = theme;
     # polarity = "dark";
-    autoEnable = false;
-    homeManagerIntegration.autoImport = false;
+    # autoEnable = false;
+    # homeManagerIntegration.autoImport = false;
     # tragets = {
     #   gnome.enable = false;
     # };
