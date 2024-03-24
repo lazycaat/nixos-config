@@ -10,10 +10,10 @@
     (modulesPath + "/profiles/hardened.nix")
   ];
 
-  environment.memoryAllocator.provider = "graphene-hardened";  
+  # environment.memoryAllocator.provider = "graphene-hardened";  
   # need for graphene malloc
-  networking.useDHCP = false;
+  # networking.useDHCP = false;
 
-  boot.kernelPackages = pkgs.linuxPackages_hardened;
+  # boot.kernelPackages = pkgs.linuxPackages_hardened;
   
 }
