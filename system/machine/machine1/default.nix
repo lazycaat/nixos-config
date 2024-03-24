@@ -46,7 +46,7 @@ in {
 
     # system
     "${system}/base-apps"
-    "${system}/documentation"
+    "${system}/documentation/min.nix"
     "${system}/localisation"
     "${system}/nix"
     "${system}/users"
