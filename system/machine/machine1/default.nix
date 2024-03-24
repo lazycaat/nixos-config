@@ -24,7 +24,6 @@ in {
 
 
     # modules
-    "${module}/disko"
     "${module}/impermanence"
     "${module}/impermanence/btrfs.nix"
     "${module}/stylix"
