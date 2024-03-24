@@ -15,6 +15,14 @@
 
   ];
 
+  programs.fuse.userAllowOther = true;
+  home-manager = {
+    extraSpecialArgs = {inherit inputs self;};
+    users = {
+      "user1" = import ./home.nix;
+    };
+  };
+
   users.users = {
     user1 = {
       isNormalUser = true;
@@ -25,13 +33,5 @@
   };
 
   programs.fish.enable = true;
-
-  programs.fuse.userAllowOther = true;
-  home-manager = {
-    extraSpecialArgs = {inherit inputs self;};
-    users = {
-      "user1" = import ./home.nix;
-    };
-  };
 
 }
