@@ -14,7 +14,7 @@
 in {
 
   imports = [
-    inputs.stylix.homeManagerModules.stylix
+    inputs.stylix.nixosModules.stylix
   ];
 
   stylix = {
@@ -23,11 +23,11 @@ in {
     # polarity = "dark";
     autoEnable = false;
     homeManagerIntegration.autoImport = false;
-    tragets = {
-      gnome.enable = false;
-    };
+    # tragets = {
+    #   gnome.enable = false;
+    # };
   };
 
-  programs.dconf.enable = true;
+  # programs.dconf.enable = true;
 
 }
