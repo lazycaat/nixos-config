@@ -5,13 +5,13 @@
 Install
 
 #+begin_src bash
-nix --experimental-features "nix-command flakes" run 'github:nix-community/disko#disko-install' -- --write-efi-boot-entries --flake 'github:lazycaat/nixos-config/develop#machine1' --disk main /dev/vda
+nix --experimental-features "nix-command flakes" run 'github:nix-community/disko#disko-install' -- --write-efi-boot-entries --flake 'github:lazycaat/nixos-config#machine1' --disk main /dev/vda
 #+end_src
 
 Upgrade
 
 #+begin_src bash
-nixos-rebuild boot --refresh --flake 'github:lazycaat/nixos-config#default'
+nixos-rebuild boot --refresh --flake 'github:lazycaat/nixos-config#machine1'
 #+end_src
 
 ** TODO nixos [0/1]
