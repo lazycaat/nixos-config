@@ -23,6 +23,9 @@ in {
     # polarity = "dark";
     autoEnable = false;
     homeManagerIntegration.autoImport = false;
+    tragets = {
+      gnome.enable = false;
+    };
   };
 
   programs.dconf.enable = true;
