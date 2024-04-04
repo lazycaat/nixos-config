@@ -31,7 +31,6 @@ in {
 
     # security
     "${security}/audit"
-    # "${security}/auth"
     "${security}/firewall"
     "${security}/hardened"
 
@@ -42,7 +41,6 @@ in {
     "${service}/fwupd"
     "${service}/ksm"
     "${service}/powertop"
-    "${service}/auto-cpufreq"
 
     # system
     "${system}/base-apps"

@@ -4,6 +4,7 @@
 }: let
 
   terminal = "${self}/home/module/app/terminal";
+  module = "${self}/home/module/module";
 
 in { 
 
@@ -21,7 +22,9 @@ in {
     "${terminal}/zellij"
     "${terminal}/zoxide"
 
-    # "${self}/home/module/module/stylix"
+    # modules
+    # "${module}/stylix"
+    "${module}/nix-index"
 
     # per user
     ./variables.nix
