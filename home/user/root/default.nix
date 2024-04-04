@@ -1,8 +1,25 @@
 {
+  pkgs,
+  inputs,
+  self,
   ...
 }:
 
 {
+
+  imports = [ 
+    inputs.home-manager.nixosModules.home-manager 
+    "${self}/home/module/module/home-manager"
+  ];
+
+  programs.fuse.userAllowOther = true;
+  home-manager = {
+    extraSpecialArgs = {inherit inputs self;};
+    shell = pkgs.fish;
+    users = {
+      "user1" = import ./home;
+    };
+  };
 
   users.users = {
     root = {
@@ -10,12 +27,6 @@
     };
   };
 
-  # programs.fuse.userAllowOther = true;
-  # home-manager = {
-  #   extraSpecialArgs = {inherit inputs;};
-  #   users = {
-  #     "user1" = import ./home.nix;
-  #   };
-  # };
+  programs.fish.enable = true;
 
 }
