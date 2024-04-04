@@ -27,7 +27,6 @@ in {
     "${module}/impermanence"
     "${module}/impermanence/btrfs.nix"
     "${module}/stylix"
-    "${module}/lanzaboote"
 
 
     # security
