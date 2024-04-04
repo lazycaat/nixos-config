@@ -14,6 +14,9 @@
         "Documents"
         "Videos"
       ];
+      files = [
+        ".local/share/fish/fish_history"
+      ];
     };
   };
   
