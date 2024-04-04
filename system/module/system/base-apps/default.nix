@@ -10,8 +10,6 @@
     wget
     git
     curl
-    yazi
-    helix
   ];
   
 }

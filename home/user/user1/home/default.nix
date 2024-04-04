@@ -13,6 +13,7 @@ in {
     "${terminal}/broot"
     "${terminal}/btop"
     "${terminal}/fish"
+    "${terminal}/helix"
     "${terminal}/lsd"
     "${terminal}/ripgrep"
     "${terminal}/skim"
