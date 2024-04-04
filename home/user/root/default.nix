@@ -15,7 +15,6 @@
   programs.fuse.userAllowOther = true;
   home-manager = {
     extraSpecialArgs = {inherit inputs self;};
-    shell = pkgs.fish;
     users = {
       "user1" = import ./home;
     };
@@ -23,6 +22,7 @@
 
   users.users = {
     root = {
+      shell = pkgs.fish;
       hashedPassword = "$y$j9T$dS2xm9Zcp2qgsbkLFbuqf0$qdLowPhZVwCOyhhmiv4DOxfiGHGFNyEGho9aU9a69DC";
     };
   };
