@@ -12,13 +12,11 @@ in {
   # NixOS configurations
   flake.nixosConfigurations = {
 
+    # qemu virtual machine
     machine1 = nixosSystem {
       inherit specialArgs;
       system = "x86_64-linux";
-
-      modules = [
-        ./machine1
-      ];
+      modules = [ ./machine1 ];
     };
 
   };
