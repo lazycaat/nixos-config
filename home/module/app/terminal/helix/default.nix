@@ -1,6 +1,4 @@
-{
-  ...
-}:
+_:
 
 {
 
@@ -39,9 +37,11 @@
           center = [ "version-control" "file-name"];
           right = ["diagnostics" "selections" "position" "file-encoding" "file-line-ending" "file-type"];
           separator = "│";
-          mode.normal = "NORMAL";
-          mode.insert = "-- INSERT --";
-          mode.select = "-- SELECT --";
+          mode = {
+            normal = "NORMAL";
+            insert = "-- INSERT --";
+            select = "-- SELECT --";
+          };
         };
 
         indent-guides = {

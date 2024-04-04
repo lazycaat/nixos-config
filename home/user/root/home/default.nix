@@ -10,7 +10,6 @@ in {
   imports = [ 
 
     # apps
-    "${terminal}/broot"
     "${terminal}/btop"
     "${terminal}/fish"
     "${terminal}/helix"
@@ -18,14 +17,10 @@ in {
     "${terminal}/ripgrep"
     "${terminal}/skim"
     "${terminal}/yazi"
-    "${terminal}/zellij"
     "${terminal}/zoxide"
 
     # per user
     ./variables.nix
-
-    # other apps
-    ./app.nix
 
   ];
 
