@@ -33,6 +33,7 @@ in {
     "${security}/audit"
     "${security}/firewall"
     "${security}/hardened"
+    "${security}/dns"
 
 
     # service
