@@ -1,12 +1,8 @@
-{
-  lib,
-  config,
-  ...
-}:
+{ config, lib, pkgs, ... }:
 
 {
   # Read the changelog before changing this value
-  home.stateVersion = lib.mkForce config.system.stateVersion;
+  home.stateVersion = "23.11";
 
   # insert home-manager config
 }
