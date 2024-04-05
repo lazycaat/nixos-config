@@ -25,7 +25,7 @@
 
     # modules
     # "${module}/stylix"
-    ../../../../home/module/module/nix-index
+    # ../../../../home/module/module/nix-index
 
     # per user
     ./variables.nix
