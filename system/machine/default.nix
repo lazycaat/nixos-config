@@ -8,9 +8,6 @@
   inherit (inputs.nix-on-droid.lib) nixOnDroidConfiguration;
 
   specialArgs = {inherit inputs self;};
-
-  pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
-
 in {
   flake = {
     
@@ -27,11 +24,9 @@ in {
     };
 
     # Nix-On-Droid configurations
-    nixOnDroidConfiguration = {
+    nixOnDroidConfigurations = {
 
       android1 = nixOnDroidConfiguration {
-        inherit specialArgs pkgs;
-        system = "aarch64-linux";
         modules = [ ./android1 ];
       };
 
