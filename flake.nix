@@ -1,6 +1,7 @@
 {
 
   description = "Nixos config flake";
+  nixConfig.commit-lockfile-summary = "flake: bump inputs";
      
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
     systems = [
