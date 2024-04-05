@@ -10,7 +10,11 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  system.stateVersion = lib.mkForce config.system.stateVersion;
+  system.stateVersion = "23.11";
+
+  environment.etcBackupExtension = ".bak";
+
+
 
   # Set up nix for flakes
   nix.extraOptions = ''
