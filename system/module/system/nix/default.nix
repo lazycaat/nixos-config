@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 
@@ -20,6 +21,9 @@
       dates = "weekly";
       automatic = true;
       persistent = true;
+    };
+    registry = {
+      nixpkgs.flake = inputs.nixpkgs;
     };
   };
   
