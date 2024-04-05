@@ -27,6 +27,7 @@ in {
     nixOnDroidConfigurations = {
 
       android1 = nixOnDroidConfiguration {
+        system.stateVersion = "23.11";
         modules = [ ./android1 ];
       };
 
