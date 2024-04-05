@@ -1,6 +1,5 @@
 {
   pkgs,
-  self,
   ...
 }:
 
@@ -51,7 +50,11 @@
 
   # Configure home-manager
   home-manager = {
-    config = "${self}/home/user/user1/home";
+    # config = "${self}/home/user/user1/home";
+
+    # attribute 'self' missing
+    config = ../../../home/user/user1/home;
+
     backupFileExtension = "hm-bak";
     useGlobalPkgs = true;
     sharedModules = [
