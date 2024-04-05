@@ -46,7 +46,7 @@
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 
     ### Nix-on-droid
-    nix-on-droid.url = "github:nix-community/nix-on-droid/release-23.11";
+    nix-on-droid.url = "github:nix-community/nix-on-droid/master";
     nix-on-droid.inputs.nixpkgs.follows = "nixpkgs";
     nix-on-droid.inputs.home-manager.follows = "home-manager";
 
