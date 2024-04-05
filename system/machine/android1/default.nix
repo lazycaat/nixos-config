@@ -1,5 +1,6 @@
 {
   pkgs,
+  self,
   ...
 }:
 
@@ -50,9 +51,13 @@
 
   # Configure home-manager
   home-manager = {
-    config = ./home.nix;
+    config = "${self}/home/user/user1/home";
     backupFileExtension = "hm-bak";
     useGlobalPkgs = true;
+    sharedModules = [
+      {home.stateVersion = "23.11";}
+    ];
+
   };
 
   # User
