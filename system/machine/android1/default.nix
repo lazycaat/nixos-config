@@ -1,10 +1,19 @@
-{ config, lib, pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
 
 {
   # Simply install just the packages
   environment.packages = with pkgs; [
     # User-facing stuff that you really really want to have
     vim # or some other editor, e.g. nano or neovim
+    git
+    helix
+    zellij
+    yazi
+    wget
+    curl
 
     # Some common stuff that people expect to have
     #procps
@@ -43,4 +52,11 @@
     backupFileExtension = "hm-bak";
     useGlobalPkgs = true;
   };
+
+  # User
+
+  user = {
+    shell = "${pkgs.fish}/bin/fish";
+  };
+  
 }
