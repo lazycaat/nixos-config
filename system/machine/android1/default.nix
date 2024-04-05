@@ -53,7 +53,7 @@
     # config = "${self}/home/user/user1/home";
 
     # attribute 'self' missing
-    config = ../../../home/user/user1/home;
+    config = ./home;
 
     backupFileExtension = "hm-bak";
     useGlobalPkgs = true;
