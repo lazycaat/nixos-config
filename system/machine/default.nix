@@ -14,7 +14,7 @@ in {
   # NixOS configurations
   flake.nixosConfigurations = {
 
-    # qemu virtual machine
+    ## qemu virtual machine
     machine1 = nixosSystem {
       inherit specialArgs;
       system = "x86_64-linux";
@@ -26,8 +26,9 @@ in {
   # Nix-On-Droid configurations
   flake.nixOnDroidConfiguration = {
 
-    # qemu virtual machine
     android1 = nixOnDroidConfiguration {
+      inherit specialArgs;
+      system = "aarch64-linux";
       modules = [ ./android1 ];
     };
 

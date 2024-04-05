@@ -5,7 +5,7 @@
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } {
     systems = [
       "x86_64-linux"
-      # "aarch64-linux"
+      "aarch64-linux"
       # "x86_64-darwin"
       # "aarch64-darwin"
       # "i686-linux"
@@ -44,6 +44,11 @@
     ### System-wide colorscheming and typography for NixOS
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
+
+    ### Nix-on-droid
+    nix-on-droid.url = "github:nix-community/nix-on-droid/release-23.11";
+    nix-on-droid.inputs.nixpkgs.follows = "nixpkgs";
+    nix-on-droid.inputs.home-manager.follows = "home-manager";
 
     ### Collection of image builders
     nixos-generators.url = "github:nix-community/nixos-generators";

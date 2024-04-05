@@ -1,22 +1,30 @@
 {
-  self,
+  inputs,
+  config,
+  lib,
   ...
-}: let
+}:
 
-  user = "${self}/home/user";
-  module = "${self}/system/module/module";
-  security = "${self}/system/module/security";
-  service = "${self}/system/module/service";
-  system = "${self}/system/module/system";
-
-in {
+{
   imports = [
-
-
-
-
+    inputs.home-manager.nixosModules.default
   ];
 
-  system.stateVersion = "23.11";
+  system.stateVersion = lib.mkForce config.system.stateVersion;
+
+  # Set up nix for flakes
+  nix.extraOptions = ''
+    experimental-features = nix-command flakes
+  '';
+
+  # Set your time zone
+  #time.timeZone = "Europe/Berlin";
+
+  # Configure home-manager
+  home-manager = {
+    config = ./home.nix;
+    backupFileExtension = "hm-bak";
+    useGlobalPkgs = true;
+  };
 
 }
