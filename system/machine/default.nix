@@ -21,6 +21,13 @@ in {
         modules = [ ./machine1 ];
       };
 
+      ## first real laptop
+      machine2 = nixosSystem {
+        inherit specialArgs;
+        system = "x86_64-linux";
+        modules = [ ./machine2 ];
+      };
+
     };
 
     # Nix-On-Droid configurations
