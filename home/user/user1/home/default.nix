@@ -14,6 +14,7 @@ in {
     "${terminal}/broot"
     "${terminal}/btop"
     "${terminal}/fish"
+    "${terminal}/nushell"
     "${terminal}/helix"
     "${terminal}/lsd"
     "${terminal}/ripgrep"

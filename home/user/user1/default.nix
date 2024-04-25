@@ -26,7 +26,8 @@
   users.users = {
     user1 = {
       isNormalUser = true;
-      shell = pkgs.fish;
+      # shell = pkgs.fish;
+      shell = pkgs.nushellFull;
       hashedPassword = "$y$j9T$dS2xm9Zcp2qgsbkLFbuqf0$qdLowPhZVwCOyhhmiv4DOxfiGHGFNyEGho9aU9a69DC";
       extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     };
