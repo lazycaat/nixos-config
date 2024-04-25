@@ -28,6 +28,14 @@ in {
         modules = [ ./machine2 ];
       };
 
+      ## custom iso
+      iso-gui = nixosSystem {
+        inherit specialArgs;
+        system = "x86_64-linux";
+        modules = [ ./iso-gui ];
+      };
+
+
     };
 
     # Nix-On-Droid configurations
