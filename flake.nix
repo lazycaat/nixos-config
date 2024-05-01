@@ -19,7 +19,7 @@
     # Branches
     master.url = "github:nixos/nixpkgs/master";
     unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    stable.url = "github:nixos/nixpkgs/release-23.11";
+    stable.url = "github:nixos/nixpkgs/nixos-23.11";
 
     # Default branch
     nixpkgs.follows = "unstable";
